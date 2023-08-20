@@ -1,0 +1,120 @@
+<app-nav-component></app-nav-component>
+
+<app-carousel-actividades-page></app-carousel-actividades-page>  
+
+<div class="container-fluid w-auto h-auto p-0">
+    <div class="container container-information py-5">
+        <p>
+            ¡Descubre la magia de la vida salvaje en nuestro zoológico! Disfruta de un día inolvidable rodeado de una diversidad de animales fascinantes, desde leones hasta pingüinos. Ofrecemos actividades personalizadas para todas las edades, como paseos educativos, alimentación de animales y charlas interactivas. Ya sea que nos visites de día o por la tarde, encontrarás experiencias emocionantes y educativas. Únete a nosotros y vive momentos inolvidables con tu familia en un ambiente seguro y entretenido. ¡Te esperamos en nuestro zoológico!
+        </p>
+    </div>
+</div>
+
+<hr class="mb-5">
+
+<app-actividades-matutinas-layouts></app-actividades-matutinas-layouts>
+
+<div class="container-fluid">
+    <img src="../../../assets/img/page-actividades/banner-espacio-1-actividades.svg"  class="img-fluid">
+</div>
+
+<app-actividades-vespertinas-layouts></app-actividades-vespertinas-layouts>
+
+<div class="container-fluid">
+    <img src="../../../assets/img/page-actividades/banner-espacio-2-actividades.svg"  class="img-fluid">
+</div>
+
+<div class="container-fluid container-form d-flex align-items-center justify-content-center mb-5">
+    <div class="container w-75 p-1">
+        <div class="card shadow bg-transparent card-form">
+            <div class="card-title ms-4 mt-3 mb-0">                        
+                <h1>PERSONALIZA TU ACTIVIDAD</h1>
+            </div>
+            <div class="card-body px-5">
+                <h5 class="card-title w-75">
+                    En nuestro zoológico, te ofrecemos la oportunidad de personalizar tus actividades y crear una experiencia única.
+                </h5>
+                <form [formGroup]="form" (ngSubmit)="enviar()">
+                    <div class="row row-cols-3 mt-4">
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Nombre</mat-label>
+                                <input type="text" matInput autocomplete="off" formControlName="nombreUsuario">
+                                <mat-icon matPrefix>person</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Teléfono</mat-label>
+                                <input type="tel" matInput autocomplete="off" formControlName="telefono">
+                                <mat-icon matPrefix>call</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label> Fecha </mat-label>
+                                <input matInput [matDatepicker]="picker" formControlName="fecha" autocomplete="off">
+                                <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                            </mat-form-field>  
+                        </div>                        
+                    </div>
+                    <div class="row row-cols-3 ">
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Hora</mat-label>
+                                <mat-select formControlName="hora">
+                                    <mat-option *ngFor="let horario of listHorarios" [value]="horario.id_Horario"> {{ horario.hora }} </mat-option>
+                                </mat-select>                                  
+                                <mat-icon matPrefix>schedule</mat-icon>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>N° Personas</mat-label>
+                                <input type="number" matInput autocomplete="off" formControlName="cantidadPersonas">
+                                <mat-icon matPrefix>group</mat-icon>
+                            </mat-form-field>
+                        </div>
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>N° Guias</mat-label>
+                                <mat-select formControlName="cantidadGuias" >
+                                    <mat-option value="1">1</mat-option>
+                                    <mat-option value="2">2</mat-option>
+                                    <mat-option value="3">3</mat-option>
+                                    <mat-option value="4">4</mat-option>
+                                    <mat-option value="5">5</mat-option>
+                                </mat-select>
+                                <mat-icon matPrefix>supervised_user_circle</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Descripción</mat-label>
+                                <textarea matInput formControlName="descripcion"></textarea>
+                                <mat-icon matPrefix>description</mat-icon>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="row px-3">
+                        <button class="btn btn-success btn-sm btn-send d-flex justify-content-center align-items-center" type="submit" >
+                            Personalizar Actividad
+                            <app-spinner *ngIf="loading" [diameter]="20" [color]="'white'"></app-spinner>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer mt-2">
+                <p class="footer-text">
+                    Aviso importante: Se le otorga un plazo de 72 horas para dirigirse a las oficinas del Zoológico Municipal de Loja con el código único generado para cancelar su actividad personalizada. Transcurrido este tiempo, su actividad personalizada habrá expirado.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

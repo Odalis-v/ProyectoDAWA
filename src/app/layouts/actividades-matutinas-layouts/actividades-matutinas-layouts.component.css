@@ -1,0 +1,103 @@
+.container-activities{
+    height: 570px;
+    background: url("../../../assets/img/page-actividades/sol-1-fondo.svg") no-repeat center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.description-matutina{
+    font-size: 1.3vw;
+    text-align: right;
+    padding-left: 11rem;
+    padding-right: 1rem;
+}
+
+p{
+    text-align: justify;
+    font-weight: 500;
+    color: var(--green);
+}
+
+.card-caja{
+    background: url("../../../assets/img/page-actividades/fondo-1-card-actividades.svg") no-repeat;
+    background-size: cover;
+}
+
+h1 {
+  font-family: 'Sarpanch', sans-serif;
+  font-size: 2.4em;
+  padding: 5px;
+  color: var(--brown);
+  text-shadow: .4vmin .2vmin rgb(198, 198, 185);
+  letter-spacing: .1rem;
+}
+
+.example-headers-align .mat-expansion-panel-header-description {
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.example-headers-align .mat-mdc-form-field + .mat-mdc-form-field {
+    margin-left: 8px;
+}
+
+mat-panel-description mat-icon{
+    width: 75%;
+}
+
+mat-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+
+.example-card {
+    max-width: 60%;
+    border-right: 1px solid var(--green);
+}
+
+.btn mat-icon{
+    font-size: small;
+}
+
+.btn-next{
+    border-radius: 0 0 5px 0 ;
+}
+
+.btn-next:hover{
+    background-color: var(--green);
+    color: white;
+}
+
+.btn:disabled{
+    border: none;
+}
+
+.btn-return{
+    border-radius: 0 0 0 5px;
+}
+
+.btn-return:hover{
+    background-color: var(--brown);
+    color: white;
+}
+
+@media (max-width: 767px) {
+    .description-col {
+        display: none !important;
+    }
+
+    .main-col {
+        flex-basis: 100%;
+    }
+    
+    .card-img{
+        width: 20%;
+    }
+
+    .card-text{
+        font-size: smaller;
+    }
+}

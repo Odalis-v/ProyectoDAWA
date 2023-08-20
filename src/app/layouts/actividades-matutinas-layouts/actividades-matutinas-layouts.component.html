@@ -1,0 +1,59 @@
+<div class="container-fluid container-activities d-flex align-items-center p-0">
+    <div class="row row-cols-2">            
+        <div class="col-4 d-flex align-items-center description-col">
+            <p class="description-matutina">
+                Explora la vida salvaje en nuestras actividades matutinas. Únete a una visita guiada, participa en la alimentación de los animales y disfruta de una exhibición de aves rapaces. Además, captura momentos especiales en sesiones de fotos y aprende sobre la conservación de especies en peligro de extinción. ¡Una mañana llena de diversión y descubrimiento te espera en nuestro zoológico!
+            </p>
+        </div>
+        <div class="col-8 d-flex justify-content-center main-col p-2">
+            <div class="card card-caja w-100 shadow bg-transparent">
+                <div class="card-title ms-4 mt-1 mb-0 d-flex">                        
+                    <h1>ACTIVIDADES MATUTINAS</h1>
+                    <app-spinner *ngIf="loading"></app-spinner>
+                </div> 
+                <div class="card-body">
+                    <mat-accordion class="example-headers-align">
+                        <mat-expansion-panel hideToggle *ngFor="let item of paginatedActividades" [expanded]="item.expanded">
+                            <mat-expansion-panel-header>
+                                <mat-panel-title class="text-capitalize"> {{ item.nombre }} </mat-panel-title>
+                                <mat-panel-description>Hora: {{ item.actividadInformacion.horario?.hora }}
+                                    <mat-icon>sunny_snowing</mat-icon>
+                                </mat-panel-description>
+                            </mat-expansion-panel-header>                            
+                            <div class="card border-0">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Precio: ${{item.actividadInformacion.precio}}</h5>
+                                            <h6 class="card-subtitle mb-2 text-muted">
+                                                Guias: {{item.actividadInformacion.cantidadGuias}} | 
+                                                Tiempo: {{item.tiempo}}
+                                            </h6>
+                                            <p class="card-text">
+                                                Cantidad máxima de personas: {{item.actividadInformacion.cantidadPersonas}}
+                                            </p>
+                                            <p class="card-text">
+                                                {{item.actividadInformacion.descripcion}}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                        <img src="../../../assets/img/page-actividades/img/{{item.imagen}}" class="card-img" alt="Shiba Inu">
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-expansion-panel>
+                    </mat-accordion>                          
+                </div>
+                <div class="card-footer p-0 bg-transparent border-0">
+                    <button class="btn btn-sm btn-return w-50 p-0" (click)="previousPage()" [disabled]="currentPage === 0">
+                        <mat-icon>arrow_back_ios</mat-icon>    
+                    </button>
+                    <button class="btn btn-sm btn-next w-50 p-0" (click)="nextPage()" [disabled]="currentPage === totalPages - 1">
+                        <mat-icon>arrow_forward_ios</mat-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>      
+</div>

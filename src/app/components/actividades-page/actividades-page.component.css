@@ -1,0 +1,79 @@
+.container-information{
+    column-count: 3;
+    column-gap: 4rem;
+    column-rule: .2rem solid var(--brown);
+}
+
+p{
+    text-align: justify;
+    font-weight: 500;
+    color: var(--green);
+}
+
+hr{
+    background-color: var(--brown);
+    height: .2rem;
+    opacity: 1;
+}
+
+.container-fluid {
+    width: 100%;
+    margin: .5rem 0;
+    padding: 0;
+}
+
+.card-form{
+    height: auto;
+}
+
+h1 {
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 2.6em;
+    padding: 5px;
+    color: var(--brown);
+    text-shadow: .4vmin .2vmin rgb(198, 198, 185);
+    letter-spacing: .1rem;
+}
+
+.container-form{
+    background: url("../../../assets/img/page-actividades/banner-form-container-actividades.svg") no-repeat center;
+    background-size: cover;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: var(--brown);
+    border: 2px;
+    font-size: smaller;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: var(--green);
+}
+
+mat-icon{
+    color: #333;
+    font-size: larger;
+}
+
+.row-cols-2{
+    height: 4rem;
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.btn-send{
+    font-family: monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.footer-text{
+    margin: 0;
+    padding: 0;
+    font-size: x-small;
+    color: black;
+}

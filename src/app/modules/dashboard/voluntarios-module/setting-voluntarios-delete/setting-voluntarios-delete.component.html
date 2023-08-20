@@ -1,0 +1,13 @@
+<div class="card p-2 rounded-0">
+    <img src="../../../../../assets/img/pages-voluntarios/img/{{data.imagen}}" class="card-img-top" />
+
+    <div class="card-body">
+        <h5 class="card-title"> {{data.nombres}} </h5>
+        <p class="card-text">
+            ¿Seguro que desea eliminar a esta persona voluntaria? <br> Esta acción es irreversible y borrará todos los datos asociados.
+        </p>
+        <button class="btn btn-danger btn-sm w-100" (click)="delete()">
+            <mat-icon>delete</mat-icon>
+        </button>
+    </div>
+</div>

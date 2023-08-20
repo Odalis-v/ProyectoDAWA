@@ -1,0 +1,24 @@
+<div class="card card-container py-3 px-2">
+    <div class="card-body">
+      <div class="card-title ms-2 my-2 mb-4">
+        <h5 class="text-capitalize">{{data.nombre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Hora: {{data.actividadInformacion.horario?.hora}} <i class="fas fa-sun"></i></h6>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Precio: ${{data.actividadInformacion.precio}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Guias: {{data.actividadInformacion.cantidadGuias}} | Tiempo: {{data.tiempo}}</h6>
+              <p class="card-text">Cantidad máxima de personas: {{data.actividadInformacion.cantidadPersonas}}</p>
+              <p class="card-text">{{data.actividadInformacion.descripcion}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="../../../../../assets/img/page-actividades/img/{{data.imagen}}" class="card-img h-100" alt="Shiba Inu">
+        </div>
+      </div>
+    </div>
+  </div>
+  

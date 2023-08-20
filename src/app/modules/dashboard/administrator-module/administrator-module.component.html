@@ -1,0 +1,95 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
+
+        <mat-toolbar class="toolbar-logo d-flex justify-content-center">
+            <img src="../../../../assets/img/Logo.png" class="rounded-3 shadow-sm">
+        </mat-toolbar>
+
+        <mat-nav-list>
+
+            <mat-accordion>
+
+                <mat-expansion-panel class="mt-3">
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon>pets</mat-icon>
+                        </mat-panel-title>
+
+                        <mat-panel-description class="font-weight-bold">
+                            <span class="text-dark">Animales</span>
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+                    <a mat-list-item routerLink="/administrator/default-animales">
+                        <mat-icon class="icon-items">settings</mat-icon>
+                        <span>Gestionar</span>
+                    </a>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon>directions_walk</mat-icon>
+                        </mat-panel-title>
+
+                        <mat-panel-description class="font-weight-bold">
+                            <span class="text-dark">Actividades</span>
+                        </mat-panel-description>
+
+                    </mat-expansion-panel-header>
+                    <a mat-list-item routerLink="/administrator/default-activities">
+                        <mat-icon class="icon-items">settings</mat-icon>
+                        <span>Gestionar</span>
+                    </a>
+                    <a mat-list-item routerLink="/administrator/users-activities">
+                        <mat-icon class="icon-items">manage_accounts</mat-icon>
+                        <span>Personalizados</span>
+                    </a>
+                </mat-expansion-panel>
+
+                <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                        <mat-panel-title>
+                            <mat-icon class="icono">diversity_3</mat-icon>
+                        </mat-panel-title>
+                        <mat-panel-description class="font-weight-bold">
+                            <span class="text-dark">Voluntarios</span>
+                        </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <a mat-list-item routerLink="/administrator/default-voluntarios">
+                        <mat-icon class="icon-items">settings</mat-icon>
+                        <span>Gestionar</span>
+                    </a>
+                    <a mat-list-item routerLink="/administrator/default-solicitud">
+                        <mat-icon class="icon-items">manage_accounts</mat-icon>
+                        <span>Solicitudes</span>
+                    </a>
+                </mat-expansion-panel>
+
+            </mat-accordion>
+
+
+        </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content class="overflow-hidden shadow-sm">
+        <mat-toolbar color="primary" class="ms-2 mt-2">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <!-- <span class="text-capitalize">Administrador | {{usuarioLogeado.user }}</span> -->
+            <span class="text-capitalize">Administrador</span>
+            <div class="container">
+                <button class="float-end" mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon matTooltip="Opciones">more_vert</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLink="" class="text-center p-0">
+                        <mat-icon class="ms-4 w-100">logout</mat-icon>
+                    </button>
+                </mat-menu>
+            </div>
+        </mat-toolbar>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,101 @@
+.sidenav-container {
+    height: 100%;
+    background-color: white;
+}
+
+.sidenav {
+    width: 220px;
+    background: url("../../../../assets/img/fondo-dashboard-leteral.svg") no-repeat;
+    background-size: cover;
+    border: none;
+}
+
+.sidenav .mat-toolbar {
+    background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: var(--green);
+    border-radius: 1rem 0 0 1rem;
+}
+
+.toolbar-logo {
+    height: 10rem;
+}
+
+.toolbar-logo img {
+    width: 75%;
+    background-color: var(--green);
+}
+
+mat-expansion-panel {
+    margin: .5rem;
+}
+
+a {
+    border: 1px solid var(--brown);
+    transition: background-color 0.3s ease;
+    border-radius: 1rem 0 1rem 0;
+    margin: .4rem 0;
+}
+
+a:hover {
+    background-color: var(--brown);
+}
+
+a span {
+    font-size: .75rem;
+    font-weight: 500;
+    padding-left: .3rem;
+    color: black;
+}
+
+a:hover span,
+a:hover .icon-items {
+    color: white;
+}
+
+.icon-items {
+    color: var(--brown);
+    margin: 0;
+    font-size: medium;
+    padding-top: .5rem;
+}
+
+mat-icon {
+    color: var(--green);
+}
+
+.container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container span {
+    text-transform: uppercase;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.container mat-icon {
+    color: white;
+}
+
+@media (max-width:957px) {
+    .title-nav {
+        color: var(--green);
+    }
+    .mat-toolbar.mat-primary {
+        background: var(--green);
+    }
+    .mat-toolbar button mat-icon {
+        color: white;
+    }
+    mat-toolbar span {
+        color: var(--green);
+    }
+}

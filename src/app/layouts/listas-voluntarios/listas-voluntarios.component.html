@@ -1,0 +1,20 @@
+<mat-card class="custom-card ">
+    <mat-progress-bar color="warn" class="mb-3" mode="indeterminate" *ngIf="loading"></mat-progress-bar>
+    <div class="container">
+        <div class="person" *ngFor="let person of people">
+            <img src="../../../assets/img/pages-voluntarios/img/{{person.imagen}}" (click)="openModal(person)">
+            <h2>{{ person.nombres }}</h2>
+        </div>
+    </div>
+</mat-card>
+
+<div class="modal" *ngIf="showModal && selectedPerson">
+    <div class="modal-content">
+        <h1>{{ selectedPerson.nombres }}</h1>
+        <h1>{{ selectedPerson.apellidos }}</h1>
+        <img src="../../../assets/img/pages-voluntarios/img/{{selectedPerson.imagen}}" style="height: 15rem; object-fit: cover;">
+        <p>Edad: {{ selectedPerson.edad }}</p>
+        <p>Ocupacion: {{ selectedPerson.experiencia }}</p>
+        <button (click)="closeModal()">Cerrar</button>
+    </div>
+</div>

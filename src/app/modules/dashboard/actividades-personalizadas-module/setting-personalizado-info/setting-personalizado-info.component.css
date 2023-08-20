@@ -1,0 +1,16 @@
+.card {
+    margin: 10px 5px;
+}
+
+.card-header {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body p {
+    margin-bottom: 5px;
+}

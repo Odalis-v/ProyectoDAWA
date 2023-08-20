@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="card border-0 shadow-none ">
+    <div class="card-header bg-transparent border-0 mt-2">Detalles de la Reserva</div>
+    <div class="card-body">
+      <p><strong>Nombre de Usuario:</strong> {{data.nombreUsuario}}</p>
+      <p><strong>Teléfono:</strong> {{data.telefono}}</p>
+      <p><strong>Cantidad de Personas:</strong> {{data.actividadInformacion.cantidadPersonas}}</p>
+      <p><strong>Cantidad de Guías:</strong> {{data.actividadInformacion.cantidadGuias}}</p>
+      <p><strong>Precio:</strong> ${{data.actividadInformacion.precio}}</p>
+      <p><strong>Hora:</strong> {{data.actividadInformacion.horario?.hora}}</p>
+      <p><strong>Fecha:</strong> {{data.fecha | date:'YYYY-MM-dd' }}</p>
+      <p><strong>Descripción:</strong> {{data.actividadInformacion.descripcion}}</p>
+    </div>
+  </div>
+</div>

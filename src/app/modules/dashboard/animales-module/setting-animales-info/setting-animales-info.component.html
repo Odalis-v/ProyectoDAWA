@@ -1,0 +1,25 @@
+<div class="card card-container py-3 px-2">
+    <div class="card-body">
+      <div class="card-title ms-2 my-2 mb-4">
+        <h5 class="text-capitalize">{{data.nombre}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Especie: {{data.especie}} <i class="fas fa-sun"></i></h6>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="card h-100">
+            <div class="card-body">
+              <h6 class="card-subtitle mb-2 text-muted">Edad: {{data.edad}}</h6>
+              <h6 class="card-subtitle mb-2 text-muted">Sexo del Animal: {{data.genero}}</h6>
+              <p class="card-text">Origen: {{data.origen}}</p>
+              <p class="card-text">Habitat: {{data.habitat}}</p>
+              <p class="card-text">Dato Curioso: {{data.observaciones}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex align-items-center">
+          <img src="../../../../../assets/img/page-animales/fotos/{{data.imagen}}" class="card-img h-100" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,96 @@
+<div class="container-sm w-100" >
+    <div class="row">
+        <div class="card-title text-center mt-4">
+            <span class="h2 title w-100">{{title}}</span>
+        </div>
+    </div>
+
+    <div class="container-sm w-100" id="contenedor-principal">        
+        <form [formGroup]="form" (ngSubmit)="accion()">
+
+            <div class="row row-cols-2 mt-4">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label> Nombre </mat-label>
+                        <input type="text" matInput autocomplete="off" formControlName="nombre">
+                        <mat-icon matPrefix>person</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <div class="input-group p-0">
+                        <label class="input-group-text p-1" for="inputGroupFile01">
+                            <mat-icon class="icon-file" matPrefix>upload_file</mat-icon>
+                        </label>
+                        <input type="file" class="form-control" id="inputGroupFile01" formControlName="imagen" (change)="onFileSelected($event)">
+                    </div>   
+                </div>
+            </div>
+            
+            <div class="row row-cols-2">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label> Edad : </mat-label>
+                        <input type="number" matInput autocomplete="off" formControlName="edad">
+                        <mat-icon matPrefix>group</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label> Especie :</mat-label>
+                        <input type="text" matInput autocomplete="off" formControlName="especie">
+                        <mat-icon matPrefix>person</mat-icon>
+                    </mat-form-field>
+                </div>
+            </div>          
+            
+            <div class="row row-cols-2">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Sexo del Animal:</mat-label>
+                        <mat-select formControlName="genero" >
+                            <mat-option [value]="'Macho'">Macho</mat-option>
+                            <mat-option [value]="'Hembra'">Hembra</mat-option>
+                        </mat-select>
+                        <mat-icon matPrefix>schedule</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Origen</mat-label>
+                        <textarea  matInput placeholder="Xxxxxx" formControlName="origen" rows="5"></textarea>
+                      </mat-form-field>
+                </div>
+            </div>
+            
+            <div class="row row-cols-2">
+                <div class="col">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Habitat </mat-label>
+                        <textarea matInput formControlName="habitat" rows="5"></textarea>
+                        <mat-icon matPrefix>description</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Observacion </mat-label>
+                            <textarea matInput formControlName="observaciones" rows="5"></textarea>
+                            <mat-icon matPrefix>description</mat-icon>
+                        </mat-form-field>
+                    </div>
+                    <div class="row my-2 mt-0 btn-actions">
+                        <button class="btn btn-danger btn-sm" mat-dialog-close >
+                            <mat-icon> arrow_back_ios </mat-icon>
+                        </button>
+                    </div>
+                    <div class="row btn-actions">
+                        <button class="btn btn-success btn-sm btn-send" type="submit" >
+                            <mat-icon>{{iconName}}</mat-icon>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>

@@ -1,0 +1,47 @@
+.container-sm {
+    background: url("../../../../../assets/img/page-actividades/fondo-dashboard-actividades-addedit.svg") no-repeat bottom;
+    background-size: cover;
+}
+
+.container-sm{
+    padding: 0 1rem;
+    height: auto;
+}
+
+span {
+    font-family: 'Sarpanch', sans-serif;
+    font-size: 1.5em;
+    padding: 5px;
+    color: var(--brown);
+    text-shadow: .3vmin .1vmin rgb(198, 198, 185);
+    letter-spacing: .1rem;
+}
+
+.input-group .input-group-text, .form-control{
+    background: none;
+    border: 1px solid #a79d9d;
+    font-size: .7rem;
+    padding-top: 1.2rem;
+    height: 3.4rem;
+}
+
+input[type=file]::-webkit-file-upload-button {
+    background: var(--VerdeClaro);
+}
+
+mat-form-field{
+    width: 100%;
+}
+
+.btn-sm{
+    height: 2rem;
+}
+
+.btn mat-icon{
+    font-size: medium;
+    padding-top: .2rem;
+}
+
+.btn-actions{
+    padding: 0 .9rem;
+}

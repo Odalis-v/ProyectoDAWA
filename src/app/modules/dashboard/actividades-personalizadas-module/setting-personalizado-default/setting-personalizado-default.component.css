@@ -1,0 +1,58 @@
+.container-fluid {
+    height: 80vh;
+}
+
+.title{
+    font-family: 'Sarpanch', sans-serif;
+    color: var(--brown);
+    text-shadow: .3vmin .1vmin rgb(198, 198, 185);
+    letter-spacing: .1rem;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: var(--brown);
+    border: 2px;
+    font-size: smaller;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: var(--green);
+}
+
+.btn-accion{
+    font-size: x-small;
+    height: 2rem;
+}
+
+.btn-accion mat-icon{
+    font-size: 1rem;
+}
+
+table {
+    width: 100%;
+}
+  
+td, th {
+    width: 15%;
+    font-size: .8rem;
+}
+
+.container-table{
+    overflow: auto;
+}
+
+.container .btn-accion{
+    margin: 0 .1rem;
+}
+
+.container-table::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: none;
+    height: .5rem;
+}
+
+.container-table::-webkit-scrollbar-thumb {
+    background-color: var(--green);
+}

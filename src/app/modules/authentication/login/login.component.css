@@ -1,0 +1,46 @@
+.text-title {
+    color: var(--green);
+}
+
+.img-thumbnail{
+    width: 100px;
+    border: none;
+    margin-right: 10px;
+}
+
+.text-subtitle {
+    margin-bottom: 70px;
+    font-family: 'Raleway';
+    font-size: 30px;
+    font-weight: bold;
+    color: #8B4513;
+    letter-spacing: 1px
+}
+
+.btn {
+    font-family: monospace;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.icon-password {
+    font-size: medium;
+    padding-top: .2rem;
+}
+
+::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+    color: var(--brown);
+    border: 2px;
+    font-size: smaller;
+}
+
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+    border-color: var(--green);
+}
+
+.btn-sm mat-icon{
+    font-size: larger;
+    padding-top: .3rem;
+}

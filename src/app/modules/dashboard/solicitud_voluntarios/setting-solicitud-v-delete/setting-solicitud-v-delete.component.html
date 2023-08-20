@@ -1,0 +1,11 @@
+<div class="card p-2 rounded-0">
+    <div class="card-body">
+        <h5 class="card-title"> ¿Seguro que desea {{title}} la solicitud de {{datos.nombres}}?</h5>
+        <p class="card-text">
+            Esta acción es irreversible y borrará todos los datos asociados.
+        </p>
+        <button class="btn {{clase}} btn-sm w-100" (click)="accion()">
+            <mat-icon>{{icono}}</mat-icon>
+        </button>
+    </div>
+</div>

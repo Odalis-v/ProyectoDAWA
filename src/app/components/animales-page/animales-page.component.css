@@ -1,0 +1,105 @@
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    color: var(--green);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+mat-card {
+    margin-top: 30px;
+    width: 50%;
+    background-color: #efefef;
+}
+
+p {
+    width: 100%;
+    text-align: justify;
+    color: black;
+}
+
+.lista-animales {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.cabecera-lista-animales {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+
+}
+
+.img-lista-animales {
+    width: 100px;
+}
+
+#imagen-fondo1 {
+    width: 300px;
+    position: absolute;
+    top: 90vh;
+    left: 150vh;
+}
+
+
+
+#imagen-fondo2{
+    width: 250px;
+}
+
+#imagen-fondo2 {
+    width: 250px;
+    position: absolute;
+    top: 137vh;
+    right: 80vh;
+}
+
+
+.flecha-animales{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px;
+
+}
+
+.flecha-animales video{
+    width: 80vh;
+    border-radius: 5px;
+}
+
+.flecha-animales p{
+    padding: 20px;
+
+}
+
+.flecha-animales mat-card{
+    background-color: #c1e1b9;
+    border-radius: 15px;
+}
+
+#flecha{
+    position: absolute;
+    left: 100px;
+    transform: rotate(40deg);
+    width: 400px;
+    top: 190vh;
+}
+
+
+
+app-animales-lista-layouts {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+    margin-bottom: 30px;
+    align-items: center;
+    justify-content: center;
+}

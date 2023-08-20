@@ -1,0 +1,33 @@
+.fondo {
+    background-color: #006400;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.fondo img {
+    width: 110px;
+    height: auto;
+}
+
+.links ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.links ul a {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    transition: all 0.5s ease-in-out;
+}
+
+.links ul :hover a {
+    color: #FFA500;
+    transform: scale(1.1);
+}
